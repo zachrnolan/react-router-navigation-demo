@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Text } from 'react-native'
 import { Switch, Route, Redirect } from 'react-router'
-import { NativeRouter, Link } from 'react-router-native'
+import { NativeRouter } from 'react-router-native'
 import { BottomNavigation, Tab } from 'react-router-navigation'
 import HomeStack from './home/HomeStack'
 import DiscoverStack from './discover/DiscoverStack'
