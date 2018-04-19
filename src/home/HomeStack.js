@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Navigation, Card } from 'react-router-navigation'
 import Home from './Home'
-import DiscoverPeople from '../DiscoverPeople'
+import DiscoverPeople from '../discover_people/DiscoverPeople'
 
 class HomeStack extends Component {
   componentDidMount() {

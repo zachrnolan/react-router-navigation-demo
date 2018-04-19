@@ -5,9 +5,9 @@ import { NativeRouter, Link } from 'react-router-native'
 import { BottomNavigation, Tab } from 'react-router-navigation'
 import HomeStack from './home/HomeStack'
 import DiscoverStack from './discover/DiscoverStack'
-import PostReaction from './PostReaction'
-import Activity from './Activity'
-import Profile from './Profile'
+import PostReactionStack from './post_reaction/PostReactionStack'
+import ActivityStack from './activity/ActivityStack'
+import ProfileStack from './profile/ProfileStack'
 
 class App extends Component {
   render() {
@@ -29,15 +29,15 @@ class App extends Component {
                   label='Discover' />
                 <Tab
                   path='/post-reaction'
-                  component={PostReaction}
+                  component={PostReactionStack}
                   label='Post Reaction' />
                 <Tab
                   path='/activity'
-                  component={Activity}
+                  component={ActivityStack}
                   label='Activity' />
                 <Tab
                   path='/profile'
-                  component={Profile}
+                  component={ProfileStack}
                   label='Profile' />
               </BottomNavigation>
             )}
