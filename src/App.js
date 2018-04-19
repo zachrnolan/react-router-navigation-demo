@@ -3,8 +3,8 @@ import { Text } from 'react-native'
 import { Switch, Route, Redirect } from 'react-router'
 import { NativeRouter, Link } from 'react-router-native'
 import { BottomNavigation, Tab } from 'react-router-navigation'
-import Home from './Home'
-import Discover from './Discover'
+import HomeStack from './home/HomeStack'
+import DiscoverStack from './discover/DiscoverStack'
 import PostReaction from './PostReaction'
 import Activity from './Activity'
 import Profile from './Profile'
@@ -21,11 +21,11 @@ class App extends Component {
               <BottomNavigation>
                 <Tab
                   path='/home'
-                  component={Home}
+                  component={HomeStack}
                   label='Home' />
                 <Tab
                   path='/discover'
-                  component={Discover}
+                  component={DiscoverStack}
                   label='Discover' />
                 <Tab
                   path='/post-reaction'

@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
-class Discover extends Component {
+class DiscoverPeople extends Component {
   componentDidMount() {
-    console.log('Discover componentDidMount')
+    console.log('DiscoverPeople componentDidMount')
   }
   componentWillUnmount() {
-    console.log('Discover componentWillUnmount')
+    console.log('DiscoverPeople componentWillUnmount')
   }
   render() {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Discover</Text>
+        <Text>DiscoverPeople</Text>
       </View>
     )
   }
 }
 
-export default Discover
+export default DiscoverPeople
