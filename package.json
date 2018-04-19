@@ -8,11 +8,17 @@
     "test": "jest"
   },
   "dependencies": {
+    "history": "^4.7.2",
+    "immutable": "^3.8.2",
     "react": "16.3.1",
     "react-native": "0.55.3",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-native": "^4.2.0",
-    "react-router-navigation": "^1.0.0-rc.4"
+    "react-router-navigation": "^1.0.0-rc.4",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.0",
+    "redux-loop": "^2.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
