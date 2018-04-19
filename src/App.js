@@ -9,7 +9,7 @@ import HomeStack from './modules/home/HomeStack'
 import DiscoverStack from './modules/discover/DiscoverStack'
 import PostReactionStack from './modules/post_reaction/PostReactionStack'
 import ActivityStack from './modules/activity/ActivityStack'
-import ProfileStack from './modules/profile/ProfileStack'
+import ProfileStack from './modules/profile/ProfileStackContainer'
 
 const history = createHistory()
 

@@ -2,10 +2,12 @@ import { Map } from 'immutable'
 import { combineReducers } from 'redux-loop'
 import { routerReducer } from 'react-router-redux'
 
+import AuthStateReducer from './AuthState'
 import UserStateReducer from './UserState'
 
 const reducers = {
   router: routerReducer,
+  auth: AuthStateReducer,
   users: UserStateReducer,
 }
 
