@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "username": "zachnolan",
+    "name": "Zach Nolan",
+    "biography": "#1 Duster",
+    "email": "zachrnolan@gmail.com"
+  },
+  {
+    "id": "2",
+    "username": "geoffplitt",
+    "name": "Geoff Plitt",
+    "biography": "Engineer & Comedian",
+    "email": "geoffplitt@gmail.com"
+  },
+  {
+    "id": "3",
+    "username": "christine",
+    "name": "Christine Holland",
+    "biography": "Squid",
+    "email": "christine@gmail.com"
+  },
+  {
+    "id": "4",
+    "username": "jake",
+    "name": "Jake Konner",
+    "biography": "Growth Hacker",
+    "email": "jake@gmail.com"
+  }
+]
