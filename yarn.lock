@@ -4716,9 +4716,9 @@ realpath-native@^1.0.0:
   dependencies:
     util.promisify "^1.0.0"
 
-redux-loop@^2.1.0:
-  version "2.2.2"
-  resolved "https://registry.npmjs.org/redux-loop/-/redux-loop-2.2.2.tgz#1df804487be0f79daf7eff065ad8301ce255fd4e"
+redux-loop@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/redux-loop/-/redux-loop-2.1.0.tgz#4c81ca2419ddd955b30de266af9562583c1d87de"
 
 redux@^4.0.0:
   version "4.0.0"

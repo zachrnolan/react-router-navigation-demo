@@ -22,20 +22,24 @@ class Home extends Component {
               username: item.username
             }
           }}>
-          <Text style={{color: 'blue', fontSize: 16}}>{item.username}</Text>
+          <View>
+            <Text style={{color: 'blue', fontSize: 16}}>{item.username}</Text>
+            <Text>{item.name}</Text>
+          </View>
         </Link>
       </View>
     )
   }
 
   render() {
+    const { users, sortedUserIds } = this.props
     return (
       <View style={{flex: 1}}>
         <Link to="/home/discover-people" style={{ padding: 20 }}>
           <Text>Go To DiscoverPeople</Text>
         </Link>
         <FlatList
-          data={this.props.users}
+          data={sortedUserIds.map(id => users[id])}
           keyExtractor={item => item.id}
           renderItem={this.renderUser} />
       </View>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Text, TouchableOpacity } from 'react-native'
 import { Navigation, Card } from 'react-router-navigation'
 import Home from './HomeContainer'
 import DiscoverPeople from '../discover_people/DiscoverPeople'
@@ -6,7 +7,8 @@ import Profile from '../profile/ProfileContainer'
 
 class HomeStack extends Component {
   state = {
-    profileTitle: ''
+    profileTitle: '',
+    saveProfile: null,
   }
 
   componentDidMount() {
@@ -24,8 +26,21 @@ class HomeStack extends Component {
   }
 
   render() {
+    const { location } = this.props
     return (
-      <Navigation backButtonTitle=' '>
+      <Navigation
+        backButtonTitle=' '
+        renderRightButton={() => {
+          if (location.pathname.includes('/home/profile/')) {
+            return (
+              <TouchableOpacity onPress={this.state.saveProfile} style={{ paddingRight: 10 }}>
+                <Text>Save</Text>
+              </TouchableOpacity>
+            )
+          } else {
+            return null
+          }
+        }}>
         <Card
           exact path='/home'
           title='Latest Reactions'
@@ -36,7 +51,7 @@ class HomeStack extends Component {
           component={DiscoverPeople} />
         <Card
           exact path='/home/profile/:id'
-          render={(ownProps) => <Profile {...ownProps} setNavigationState={this.setNavigationState} />}
+          render={(ownProps) => <Profile {...ownProps} setNavigationState={this.setNavigationState} saveProfile={this.saveProfile} />}
           title={this.state.profileTitle} />
       </Navigation>
     )
