@@ -11,6 +11,9 @@ class Home extends Component {
   componentWillUnmount() {
     console.log('Home componentWillUnmount')
   }
+  componentWillReceiveProps() {
+    console.log('Home componentWillReceiveProps')
+  }
 
   renderUser = ({item}) => {
     return (

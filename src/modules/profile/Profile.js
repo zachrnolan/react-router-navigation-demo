@@ -13,17 +13,16 @@ class Profile extends Component {
   }
 
   componentWillMount() {
-    const { setNavigationState, users, match } = this.props
-    const user = users[match.params.id]
-    this.setState({name: user.name})
+    const { setNavigationState, users, user, match, location } = this.props
+    const userProfile = users[match.params.id] || user // get user OR currently logged in user
+    this.setState({name: userProfile.name})
 
     if (setNavigationState) setNavigationState('saveProfile', this.saveProfile)
+    if (location && location.state && location.state.username) this.props.setNavigationState('profileTitle', location.state.username)
   }
 
   componentDidMount() {
     console.log('Profile componentDidMount')
-    const { location } = this.props
-    if (location && location.state && location.state.username) this.props.setNavigationState('profileTitle', location.state.username)
   }
 
   componentWillUnmount() {
