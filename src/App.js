@@ -3,15 +3,13 @@ import { Provider } from 'react-redux'
 import { Switch, Route, Redirect } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import { BottomNavigation, Tab } from 'react-router-navigation'
-import createHistory from 'history/createMemoryHistory'
 import store from './redux/store'
+import history from './redux/history'
 import HomeStack from './modules/home/HomeStack'
 import DiscoverStack from './modules/discover/DiscoverStack'
 import PostReactionStack from './modules/post_reaction/PostReactionStack'
 import ActivityStack from './modules/activity/ActivityStack'
 import ProfileStack from './modules/profile/ProfileStackContainer'
-
-const history = createHistory()
 
 class App extends Component {
   render() {

@@ -58,13 +58,12 @@ export async function getUsersAsync() {
     })
 }
 
-export function updateUser(id, user, history) {
+export function updateUser(id, user) {
   return {
     type: UPDATE_USER,
     payload: {
       id,
       user,
-      history
     }
   }
 }
