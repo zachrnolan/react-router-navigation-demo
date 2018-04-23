@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
+import log from '../../utils/debug'
 
 class Activity extends Component {
   componentDidMount() {
-    console.log('Activity componentDidMount')
+    log('Activity componentDidMount')
   }
   componentWillUnmount() {
-    console.log('Activity componentWillUnmount')
+    log('Activity componentWillUnmount')
   }
   render() {
     return (

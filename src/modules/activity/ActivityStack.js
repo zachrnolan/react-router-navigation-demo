@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Navigation, Card } from 'react-router-navigation'
+import log from '../../utils/debug'
 import Activity from './Activity'
 
 class ActivityStack extends Component {
   componentDidMount() {
-    console.log('ActivityStack componentDidMount')
+    log('ActivityStack componentDidMount')
   }
   componentWillUnmount() {
-    console.log('ActivityStack componentWillUnmount')
+    log('ActivityStack componentWillUnmount')
   }
   render() {
     return (

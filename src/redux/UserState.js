@@ -2,6 +2,7 @@ import { Map, List, fromJS } from 'immutable'
 import { loop, Effects } from 'redux-loop'
 import { goBack } from 'react-router-redux'
 import _ from 'lodash'
+import log from '../utils/debug'
 import UserData from '../data/users.json'
 
 const initialState = Map({
@@ -37,7 +38,7 @@ export function getUsers() {
 export async function getUsersAsync() {
   return await wrapWithPromise(UserData)
     .then(usersRaw => {
-      console.log('usersRaw: ', usersRaw)
+      log('usersRaw: ', usersRaw)
       const users = formatUsers(usersRaw)
       const sortedUserIds = usersRaw.map(user => user.id)
       return {
@@ -85,7 +86,7 @@ export default function UserStateReducer(state = initialState, action = {}) {
     case GET_USERS_ERROR:
       return loop(
         state,
-        Effects.constant(() => console.log(action.payload.error))
+        Effects.constant(() => log(action.payload.error))
       )
 
     case UPDATE_USER:

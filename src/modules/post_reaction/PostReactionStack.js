@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Navigation, Card } from 'react-router-navigation'
+import log from '../../utils/debug'
 import PostReaction from './PostReaction'
 
 class PostReactionStack extends Component {
   componentDidMount() {
-    console.log('PostReactionStack componentDidMount')
+    log('PostReactionStack componentDidMount')
   }
   componentWillUnmount() {
-    console.log('PostReactionStack componentWillUnmount')
+    log('PostReactionStack componentWillUnmount')
   }
   render() {
     return (

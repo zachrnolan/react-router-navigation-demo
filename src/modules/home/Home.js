@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import { FlatList, Text, View } from 'react-native'
 import { Link } from 'react-router-native'
+import log from '../../utils/debug'
 import * as UserState from '../../redux/UserState'
 
 class Home extends Component {
   componentDidMount() {
-    console.log('Home componentDidMount')
+    log('Home componentDidMount')
     this.props.dispatch(UserState.getUsers())
   }
   componentWillUnmount() {
-    console.log('Home componentWillUnmount')
+    log('Home componentWillUnmount')
   }
   componentWillReceiveProps() {
-    console.log('Home componentWillReceiveProps')
+    log('Home componentWillReceiveProps')
   }
 
   renderUser = ({item}) => {

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Navigation, Card } from 'react-router-navigation'
+import log from '../../utils/debug'
 import Discover from './Discover'
 import DiscoverPeople from '../discover_people/DiscoverPeople'
 
 class DiscoverStack extends Component {
   componentDidMount() {
-    console.log('DiscoverStack componentDidMount')
+    log('DiscoverStack componentDidMount')
   }
   componentWillUnmount() {
-    console.log('DiscoverStack componentWillUnmount')
+    log('DiscoverStack componentWillUnmount')
   }
   render() {
     return (

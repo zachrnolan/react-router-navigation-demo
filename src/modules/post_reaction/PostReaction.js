@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
+import log from '../../utils/debug'
 
 class PostReaction extends Component {
   componentDidMount() {
-    console.log('PostReaction componentDidMount')
+    log('PostReaction componentDidMount')
   }
   componentWillUnmount() {
-    console.log('PostReaction componentWillUnmount')
+    log('PostReaction componentWillUnmount')
   }
   render() {
     return (

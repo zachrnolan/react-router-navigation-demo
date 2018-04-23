@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 import { Navigation, Card } from 'react-router-navigation'
+import log from '../../utils/debug'
 import Home from './HomeContainer'
 import DiscoverPeople from '../discover_people/DiscoverPeople'
 import Profile from '../profile/ProfileContainer'
@@ -12,11 +13,11 @@ class HomeStack extends Component {
   }
 
   componentDidMount() {
-    console.log('HomeStack componentDidMount')
+    log('HomeStack componentDidMount')
   }
 
   componentWillUnmount() {
-    console.log('HomeStack componentWillUnmount')
+    log('HomeStack componentWillUnmount')
   }
 
   setNavigationState = (key, value) => {

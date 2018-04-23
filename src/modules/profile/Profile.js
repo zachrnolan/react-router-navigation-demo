@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, TextInput, View, StyleSheet } from 'react-native'
+import log from '../../utils/debug'
 import * as UserState from '../../redux/UserState'
 
 class Profile extends Component {
@@ -22,18 +23,18 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    console.log('Profile componentDidMount')
+    log('Profile componentDidMount')
   }
 
   componentWillUnmount() {
-    console.log('Profile componentWillUnmount')
+    log('Profile componentWillUnmount')
   }
 
   saveProfile = () => {
     const user = {
       name: this.state.name
     }
-    console.log('user: ', user, this.state.id)
+    log('user: ', user, this.state.id)
     this.props.dispatch(UserState.updateUser(this.state.id, user))
   }
 

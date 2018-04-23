@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Navigation, Card } from 'react-router-navigation'
+import log from '../../utils/debug'
 import Profile from './ProfileContainer'
 
 class ProfileStack extends Component {
   componentDidMount() {
-    console.log('ProfileStack componentDidMount')
+    log('ProfileStack componentDidMount')
   }
 
   componentWillUnmount() {
-    console.log('ProfileStack componentWillUnmount')
+    log('ProfileStack componentWillUnmount')
   }
 
   render() {

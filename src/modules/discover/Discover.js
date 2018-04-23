@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import { Link } from 'react-router-native'
+import log from '../../utils/debug'
 
 class Discover extends Component {
   componentDidMount() {
-    console.log('Discover componentDidMount')
+    log('Discover componentDidMount')
   }
   componentWillUnmount() {
-    console.log('Discover componentWillUnmount')
+    log('Discover componentWillUnmount')
   }
   render() {
     return (
