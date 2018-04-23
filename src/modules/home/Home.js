@@ -36,6 +36,7 @@ class Home extends Component {
   }
 
   render() {
+    log('HomeView render()')
     const { users, sortedUserIds } = this.props
     return (
       <View style={{flex: 1}}>
