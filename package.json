@@ -10,6 +10,7 @@
     "android-release": "react-native run-android --variant=release"
   },
   "dependencies": {
+    "es6-symbol": "^3.1.1",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "react": "16.3.1",

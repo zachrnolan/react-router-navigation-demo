@@ -1,3 +1,4 @@
+import 'es6-symbol/implement';
 import { AppRegistry, YellowBox } from 'react-native';
 import App from './src/App';
 
