@@ -21,7 +21,7 @@ class App extends Component {
             <Route
               path="/"
               render={() => (
-                <BottomNavigation>
+                <BottomNavigation lazy={true}>
                   <Tab
                     path='/home'
                     component={HomeStack}
