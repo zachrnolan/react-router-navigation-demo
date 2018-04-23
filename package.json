@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "node ./node_modules/eslint/bin/eslint.js src test",
-    "test": "jest"
+    "test": "jest",
+    "clean-android": "cd android && ./gradlew clean && cd ..",
+    "android-release": "react-native run-android --variant=release"
   },
   "dependencies": {
     "history": "^4.7.2",
