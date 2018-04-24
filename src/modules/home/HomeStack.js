@@ -5,6 +5,7 @@ import log from '../../utils/debug'
 import Home from './HomeContainer'
 import DiscoverPeople from '../discover_people/DiscoverPeople'
 import Profile from '../profile/ProfileContainer'
+import Media from '../media/MediaContainer'
 
 class HomeStack extends Component {
   state = {
@@ -21,6 +22,7 @@ class HomeStack extends Component {
   }
 
   setNavigationState = (key, value) => {
+    log('setNavigationState: ', `${key}: ${value}`)
     this.setState({
       [key]: value,
     })
@@ -54,6 +56,10 @@ class HomeStack extends Component {
           exact path='/home/profile/:id'
           render={(ownProps) => <Profile {...ownProps} setNavigationState={this.setNavigationState} saveProfile={this.saveProfile} />}
           title={this.state.profileTitle} />
+        <Card
+          exact path='/home/media'
+          title='Media Detail'
+          component={Media} />
       </Navigation>
     )
   }

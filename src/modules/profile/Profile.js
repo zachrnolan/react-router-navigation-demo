@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, TextInput, View, StyleSheet } from 'react-native'
+import { Link } from 'react-router-native'
 import log from '../../utils/debug'
 import * as UserState from '../../redux/UserState'
 
@@ -30,6 +31,10 @@ class Profile extends Component {
     log('Profile componentWillUnmount')
   }
 
+  componentWillReceiveProps() {
+    log('Profile componentWillReceiveProps')
+  }
+
   saveProfile = () => {
     const user = {
       name: this.state.name
@@ -41,6 +46,19 @@ class Profile extends Component {
   render() {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Link to='/home/media' style={styles.link}>
+          <Text style={styles.linkText}>Go to Media</Text>
+        </Link>
+        <Link
+          to={{
+            pathname: `/home/profile/3456`,
+            state: {
+              username: 'christine'
+            }
+          }}
+          style={styles.link}>
+          <Text style={styles.linkText}>Go to Christines Profile</Text>
+        </Link>
         <Text>Name:</Text>
         <TextInput
           value={this.state.name}
@@ -60,6 +78,12 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 10,
     marginTop: 10,
+  },
+  link: {
+    marginBottom: 10
+  },
+  linkText: {
+    color: 'blue'
   }
 })
 
